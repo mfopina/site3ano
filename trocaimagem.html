@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+
+    <p id="light"> </p>
+    <br>
+<img id="MinhaImagem" src="apagado.gif" style="width: 100px;">
+
+<script>
+    var tempo = 500; //segundos
+    var timer = setInterval(cfb,tempo);
+    var img = document.querySelector("#MinhaImagem");
+    var luz = "apagada";
+
+        function cfb(){
+
+            if(luz == "acesa" ){
+                img.setAttribute('src','apagado.gif');
+                luz = "apagada";
+            }else{
+                img.setAttribute('src','acesa.gif');
+                luz = "acesa";
+            }
+
+            incluiluz();
+        }
+        function incluiluz(){
+            document.getElementById("light").innerHTML = luz;
+        }
+
+
+</script>
+
+
+
+    
+</body>
+</html>
