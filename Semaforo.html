@@ -1,0 +1,39 @@
+<html>
+<head></head>
+
+<body>
+	
+<p id="botao"></p>
+<p id="segundos"></p>
+<img id="MinhaImagem" src="verde.png" style="width:100px">
+<script>
+var tempo = 5000; //segundos
+var timer=setInterval(controle,tempo);
+var img = document.querySelector("#MinhaImagem");
+var semaforo = "verde";		
+			function controle(){
+			if (semaforo == "verde" ){
+			img.setAttribute('src', 'amarelo.png');
+			semaforo = "amarelo";
+			tempo = 1000;
+			}else{
+			if (semaforo == "amarelo" ){
+			img.setAttribute('src', 'vermelho.png');
+			semaforo = "vermelho";
+			tempo = 5000;
+			}	else{
+			img.setAttribute('src', 'verde.png');
+			semaforo = "verde";
+			tempo = 5000;
+			}}
+				incluiSemaforo();
+			}
+			function incluiSemaforo(){
+			document.getElementById("botao").innerHTML = semaforo;
+			document.getElementById("segundos").innerHTML = tempo;
+}
+</script>
+
+</body>
+
+</html>
